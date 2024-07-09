@@ -1,3 +1,4 @@
+/* General styling for HTML and body */
 html {
   height: 100%;
   width: 100%;
@@ -8,30 +9,92 @@ body {
   min-height: 100%;
   min-width: 100%;
   background: linear-gradient(pink, violet);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  font-size: 7px;
-}
-
+/* Styling for the main content container */
 #main-content {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
 
+/* Styling for the task list container */
 #list {
-  margin: 10px;
+  margin-top: 20px;
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+}
+
+/* Styling for input fields and buttons */
+#new-task-description, #new-task-priority, #new-task-user, #new-task-duration, #new-task-date {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+}
+
+button {
+  font-size: 14px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Styling for the task list items */
+ul#tasks {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.purchased {
+  text-decoration: line-through;
+  background: #d4edda;
 }
